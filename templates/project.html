@@ -33,6 +33,55 @@
         <h2>Project Overview</h2>
         <p>{{ project.description }}</p>
 
+{% if project_id == 'excel-payroll' %}
+<div class="project-detail-image">
+    <img
+        src="{{ url_for('static', filename='images/excel_dashboard.png') }}"
+        alt="Employee Payroll Analysis Excel Chart"
+    >
+</div>
+{% endif %}
+
+{% if project_id == 'tableau-music' %}
+<div class="project-detail-image">
+    <img
+        src="{{ url_for('static', filename='images/tableau_dashboard.png') }}"
+        alt="Tableau Music Trends and Artist Popularity Dashboard"
+    >
+</div>
+{% endif %}
+
+{% if project_id == 'tableau-music' %}
+<div class="project-actions">
+
+    <a href="{{ url_for('static', filename='projects/music_analysis.twbx') }}"
+       class="project-button"
+       download>
+        ↓ Download Tableau Project
+    </a>
+
+</div>
+{% endif %}
+
+{% if project_id == 'excel-payroll' %}
+<div class="project-actions">
+
+    <a href="{{ url_for('static', filename='projects/payroll_analysis.xlsx') }}"
+       class="project-button"
+       download>
+        ↓ Download Excel Project
+    </a>
+
+</div>
+{% endif %}
+
+<a href="https://public.tableau.com/app/profile/camryn.lopez7579/viz/CitizenDataProject_17923638504390/Dashboard1?publish=yes"
+   class="project-button"
+   target="_blank"
+   rel="noopener noreferrer">
+    ↗ View Interactive Dashboard
+</a>
+
         <h2>Technologies Used</h2>
         <p>{{ project.technologies }}</p>
 

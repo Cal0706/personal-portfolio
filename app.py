@@ -32,6 +32,25 @@ projects = {
             "and problem-solving."
         ),
         "technologies": "Python"
+    },
+    "excel-payroll": {
+        "title": "Employee Payroll Analysis",
+        "description": (
+            "An Excel-based analysis of employee payroll data "
+            "using calculations, charts, and data visualization "
+            "to examine compensation trends."
+        ),
+        "technologies": "Microsoft Excel, Data Analysis, Charts"
+    },
+
+    "tableau-music": {
+        "title": "Music Trends & Artist Popularity",
+        "description": (
+            "A Tableau visualization project exploring artist "
+            "popularity, song duration, explicit music, "
+            "and trends across different years."
+        ),
+        "technologies": "Tableau, Data Visualization, Analytics"
     }
 }
 
@@ -48,7 +67,11 @@ def project_detail(project_id):
     if project is None:
         abort(404)
 
-    return render_template("project.html", project=project)
+    return render_template(
+        "project.html", 
+        project_id=project_id,
+        project=project
+    )
 
 
 if __name__ == "__main__":
