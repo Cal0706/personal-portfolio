@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ project.title }} | Camryn Lopez</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Camryn Lopez</div>
+
+        <div>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#projects">Projects</a>
+            <a href="{{ url_for('home') }}#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Project Details -->
+    <section class="project-detail">
+
+        <h1>{{ project.title }}</h1>
+
+        <h2>Project Overview</h2>
+        <p>{{ project.description }}</p>
+
+        <h2>Technologies Used</h2>
+        <p>{{ project.technologies }}</p>
+
+        <h2>Project Highlights</h2>
+        <p>
+            This project demonstrates my ability to
+            apply technical skills, organize information,
+            and develop solutions to real-world problems.
+        </p>
+
+        <a href="{{ url_for('home') }}#projects"
+           class="button">
+            ← Back to Projects
+        </a>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Camryn Lopez | Personal Portfolio</p>
+    </footer>
+
+</body>
+</html>

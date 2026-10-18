@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Professional Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="intro">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Camryn Lopez</h1>
+
+        <h2>Business Analytics & Information Systems</h2>
+
+        <p>
+            I'm a Business Analytics & Information Systems
+            student at the University of South Florida,
+            passionate about data analytics, technology,
+            and solving real-world business problems.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="button">
+                View My Projects
+            </a>
+
+            <a href="{{ url_for('static', filename='resume/resume.pdf') }}"
+               class="button resume-button"
+               download>
+                Download Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I'm a Business Analytics & Information Systems
+        student at the University of South Florida,
+        pursuing a minor in Accounting.
+        I'm interested in using technology and data
+        to solve business problems, improve decision-making,
+        and develop innovative solutions.
+    </p>
+
+    <div class="about-cards">
+
+        <div class="about-card">
+            <h3>Education</h3>
+            <p><em>University of South Florida</em></p>
+            <p><em>Major:</em> Business Analytics & Information Systems</p>
+            <p><em>Minor:</em> Accounting</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Professional Interests</h3>
+            <p>- Business Analytics</p>
+            <p>- Information Technology</p>
+            <p>- Database Management</p>
+            <p>- Data Visualization</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Professional Background</h3>
+            <p>
+                Experience in customer service,
+                administrative coordination,
+                bookkeeping, and business operations.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Technical Skills Section -->
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <p>
+        Technologies and applications I've worked
+        with through academic projects and
+        professional experience.
+    </p>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>Python</h3>
+            <p>Programming, data processing, and analysis</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Microsoft Excel</h3>
+            <p>Data organization, spreadsheets, and analysis</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Tableau</h3>
+            <p>Data visualization and dashboard development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Microsoft Access</h3>
+            <p>Relational databases and data management</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Version control and project management</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>HTML & CSS</h3>
+            <p>Web design and development</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="cards">
+
+        <a href="{{ url_for('project_detail', project_id='sports-scouting') }}"
+           class="card project-card">
+            <h3>Sports Scouting Database</h3>
+            <p>Explore my athlete scouting and database design project.</p>
+            <span>View Project →</span>
+        </a>
+
+        <a href="{{ url_for('project_detail', project_id='data-dashboard') }}"
+           class="card project-card">
+            <h3>Data Analytics Dashboard</h3>
+            <p>Explore my data visualization and analytics work.</p>
+            <span>View Project →</span>
+        </a>
+
+        <a href="{{ url_for('project_detail', project_id='python-projects') }}"
+           class="card project-card">
+            <h3>Python Projects</h3>
+            <p>Explore my Python programming projects.</p>
+            <span>View Project →</span>
+        </a>
+
+    </div>
+</section>
+
+
+
+<section id="contact">
+    <h2>Get In Touch</h2>
+
+    <p>
+        I'm always interested in connecting with
+        professionals, exploring new opportunities,
+        and discussing projects related to business
+        analytics, technology, and information systems.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p>Feel free to reach out directly.</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=camryna06@gmail.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-button">
+                Send Email
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally.</p>
+            <a href="https://www.linkedin.com/in/camryn-lopez-9ab4371ba"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-button">
+                View LinkedIn
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>GitHub</h3>
+            <p>Explore my programming projects.</p>
+            <a href="https://github.com/Cal0706"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-button">
+                View GitHub
+            </a>
+        </div>
+
+    </div>
+</section>
+
+    <footer>© 2026 My Personal Portfolio</footer>
+</body>
+</html>
+
